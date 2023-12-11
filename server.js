@@ -8,11 +8,11 @@ const userRoutes = require('./routes/api/userRoutes');
 const thoughtRoutes = require('./routes/api/thoughtRoutes');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/socialNetworkDB', {
+const mongoURI = 'mongodb://localhost:27017/socialNetworkDB'; 
+
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
+    useUnifiedTopology: true
 })
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Could not connect to MongoDB', err));
