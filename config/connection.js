@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
+const { MongoClient } = require('mongodb');
+
 
 // You might need to replace this with your actual MongoDB URI
-const mongoURI = 'mongodb://localhost:27017/socialNetworkDB'; 
+const mongoURI = 'mongodb://127.0.0.1:27017/socialNetworkDB';
+ 
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,

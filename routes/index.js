@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const { MongoClient } = require('mongodb');
 
 // Import routes
 const userRoutes = require('./api/userRoutes');
